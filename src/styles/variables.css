@@ -1,0 +1,16 @@
+:root {
+    --color-black: rgb(0, 0, 0);
+    --color-black-4: rgba(0, 0, 0, 0.4);
+    --color-white: rgb(255, 255, 255);
+    --color-white-5: rgb(255, 255, 255, 0.5);
+    --color-title: rgb(39, 41, 48);
+    --color-subtitle: rgb(69, 73, 84);
+    --color-neutral: rgb(241, 242, 243);
+    --color-neutral-border: rgb(209, 211, 214);
+    --color-active: rgb(57, 105, 250);
+    --color-section-title: rgb(26, 27, 30);
+    --color-description: rgb(191, 194, 202);
+    --color-steps-bg: rgb(24, 31, 52);
+    --color-poster-sub: rgb(222, 224, 227);
+    --color-pricing-bg: rgb(246, 247, 249);
+}

@@ -7,6 +7,8 @@ import Cases from "./components/Cases/Cases";
 import Poster from "./components/Poster/Poster";
 import Pricing from "./components/Pricing/Pricing";
 import Testimonials from "./components/Testimonials/Testimonials";
+import Questions from "./components/Questions/Questions";
+import Footer from "./components/Footer/Footer";
 
 const Layout = () => {
   return (
@@ -20,6 +22,10 @@ const Layout = () => {
         <Pricing />
       </S.Container>
       <Testimonials />
+      <S.Container>
+        <Questions />
+      </S.Container>
+      <Footer />
     </S.Wrapper>
   );
 };

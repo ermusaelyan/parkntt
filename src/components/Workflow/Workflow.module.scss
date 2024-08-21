@@ -1,0 +1,98 @@
+@import "./../../styles/pxToRem";
+@import "./../../styles/media";
+
+.wrapper {
+  padding: rem(123px) 0;
+}
+
+.step__list {
+  margin: 0;
+  padding: rem(61px) 0 rem(49px) rem(88px);
+  width: 57.35%;
+  list-style-type: none;
+  background-color: var(--color-step-bg);
+  box-shadow: -25px 24px 84px 0 rgba(24, 31, 52, 0.39);
+  border-radius: rem(10px);
+}
+
+.step__order {
+  font-size: rem(30px);
+  font-weight: 500;
+  line-height: rem(30px);
+  color: var(--color-primary);
+}
+
+.step__title {
+  margin: rem(14px) 0 rem(5px);
+  font-size: rem(18px);
+  font-weight: 500;
+  line-height: rem(21px);
+  color: var(--color-step-title);
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: '';
+    margin-inline-end: rem(10px);
+    display: inline-block;
+    width: rem(24px);
+    height: rem(24px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.step__item {
+  //padding-left: rem(20px);
+  position: relative;
+
+  &:not(:first-child) {
+    padding-top: rem(16px);
+
+    //&::before {
+    //  margin-top: rem(16px);
+    //  content: '';
+    //  position: absolute;
+    //  bottom: 100%;
+    //  left: 0;
+    //  width: 1px;
+    //  height: 100%;
+    //  background-color: var(--color-primary-3);
+    //}
+  }
+
+  //&:nth-child(2)::before {
+  //  background-color: var(--color-primary);
+  //}
+
+  //&::after {
+  //  margin-top: rem(24px);
+  //  content: '';
+  //  position: absolute;
+  //  top: 0;
+  //  left: 0;
+  //  width: rem(8px);
+  //  height: rem(8px);
+  //  border-radius: 50%;
+  //  transform: translateX(-50%);
+  //  background-color: var(--color-primary);
+  //}
+
+  @for $i from 1 through 4 {
+    &:nth-child(#{$i}) .step__title::before {
+      background-image: url('./../../images/workflow/icons/#{$i}.png');
+
+      @supports (background-image: url('./../../images/workflow/icons/#{$i}.svg')) {
+        background-image: url('./../../images/workflow/icons/#{$i}.svg');
+      }
+    }
+  }
+}
+
+.step__desc {
+  font-size: rem(16px);
+  font-weight: 400;
+  line-height: rem(25px);
+  color: var(--color-step-desc);
+}
